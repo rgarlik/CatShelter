@@ -4,7 +4,7 @@ namespace CatShelter.Persistence;
 
 public class InMemoryCatStorage : ICatStorage
 {
-    public IQueryable<Cat> Cats { get => _catList.AsQueryable(); }
+    public IList<Cat> Cats { get => _catList; }
 
     private readonly List<Cat> _catList;
     public InMemoryCatStorage() {
