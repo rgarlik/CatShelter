@@ -9,10 +9,8 @@ public class InMemoryCatStorage : ICatStorage
     private readonly List<Cat> _catList;
     public InMemoryCatStorage() {
         _catList =
-        [
             // Populate with dummy data
-            .. new[]
-            {
+            new List<Cat>(){
                 new Cat("Sunshine", 1, CatBreed.Ragdoll, true),
                 new Cat("Sasha", 1, CatBreed.Sphynx, false),
                 new Cat("Alex", 1, CatBreed.MaineCoon, false),
@@ -40,8 +38,7 @@ public class InMemoryCatStorage : ICatStorage
                 new Cat("Lilly", 7, CatBreed.MaineCoon, true),
                 new Cat("Pho", 8, CatBreed.Sphynx, false),
                 new Cat("Tina", 9, CatBreed.MaineCoon, true),
-                new Cat("Mimi", 9, CatBreed.Siamese, false),
-            },
-        ];
+                new Cat("Mimi", 9, CatBreed.Siamese, false)
+            };
     }
 }
